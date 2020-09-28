@@ -15,6 +15,11 @@ kubic-libcontainer-repo:
     - file: /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
     - gpgcheck: 1
     - key_url: https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_{{ grains['osrelease'] }}/Release.key
+    - retry:
+        attempts: 5
+        until: True
+        interval: 10
+        splay: 10
 podman:
   pkg.installed:
     - require:
