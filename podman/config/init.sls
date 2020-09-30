@@ -4,6 +4,7 @@
 include:
   - .dnsname
 {% if grains['os_family'] == 'RedHat' %}
+  - .rootless
   - .selinux.podman
   - .selinux.saltstack
 {% endif %}
