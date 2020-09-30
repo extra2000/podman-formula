@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/extra2000/podman-formula/compare/v1.0.2...v1.1.0) (2020-09-30)
+
+
+### Features
+
+* **podman:** Add rootless podman support ([0105662](https://github.com/extra2000/podman-formula/commit/01056629bd7fe66e0f64a9523d1c7e3fefb26700))
+
 ### [1.0.2](https://github.com/extra2000/podman-formula/compare/v1.0.1...v1.0.2) (2020-09-28)
 
 ### [1.0.1](https://github.com/extra2000/podman-formula/compare/v1.0.0...v1.0.1) (2020-09-27)
