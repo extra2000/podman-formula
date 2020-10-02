@@ -10,7 +10,6 @@ podman-prerequisites:
 {% if grains['os'] == 'Ubuntu' %}
 kubic-libcontainer-repo:
   pkgrepo.managed:
-    - humanname: Google Chrome
     - name: "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_{{ grains['osrelease'] }}/ /"
     - file: /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
     - gpgcheck: 1
