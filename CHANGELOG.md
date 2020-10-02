@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.3](https://github.com/extra2000/podman-formula/compare/v1.1.2...v1.1.3) (2020-10-02)
+
+
+### Continuous Integrations
+
+* **semantic-release:** Add fix type ([e7d4bc6](https://github.com/extra2000/podman-formula/commit/e7d4bc661db733bfb1a162615b80794195ad241e))
+
 ### [1.1.2](https://github.com/extra2000/podman-formula/compare/v1.1.1...v1.1.2) (2020-10-02)
 
 
