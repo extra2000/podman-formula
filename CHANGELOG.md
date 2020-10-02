@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.2-beta.1](https://github.com/extra2000/podman-formula/compare/v1.1.1...v1.1.2-beta.1) (2020-10-02)
+
+
+### Code Refactoring
+
+* **package.install:** Remove humanname ([c02a816](https://github.com/extra2000/podman-formula/commit/c02a816a96a2b46087472e4ab0fbcf1300899faa))
+
 ### [1.1.1](https://github.com/extra2000/podman-formula/compare/v1.1.0...v1.1.1) (2020-10-01)
 
 
