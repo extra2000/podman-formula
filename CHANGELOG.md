@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.4](https://github.com/extra2000/podman-formula/compare/v1.1.3...v1.1.4) (2020-10-04)
+
+
+### Continuous Integrations
+
+* **semantic-release:** Fix patch updates with BREAKING CHANGE doesn't trigger major release ([b3a5e30](https://github.com/extra2000/podman-formula/commit/b3a5e30690473fafed05332415d050aaf94bf308))
+
 ### [1.1.3](https://github.com/extra2000/podman-formula/compare/v1.1.2...v1.1.3) (2020-10-02)
 
 
