@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.5](https://github.com/extra2000/podman-formula/compare/v1.1.4...v1.1.5) (2020-10-17)
+
+
+### Fixes
+
+* **config.selinux.podman:** Fix rootless container unable to mount host files ([3fef78f](https://github.com/extra2000/podman-formula/commit/3fef78f8f5212ce4dde6416a22cf3080f8d85e1c))
+
 ### [1.1.4](https://github.com/extra2000/podman-formula/compare/v1.1.3...v1.1.4) (2020-10-04)
 
 
