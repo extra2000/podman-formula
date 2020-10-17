@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/extra2000/podman-formula/compare/v1.1.5...v2.0.0) (2020-10-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* `podman-compose` have been removed. Please use rootless Podman Pod.
+
+### Code Refactoring
+
+* Remove `podman-compose` ([abc4b9f](https://github.com/extra2000/podman-formula/commit/abc4b9fbb3102bc4c1acb6c7c2445b22e000d65c))
+
 ### [1.1.5](https://github.com/extra2000/podman-formula/compare/v1.1.4...v1.1.5) (2020-10-17)
 
 
