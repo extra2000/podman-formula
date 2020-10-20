@@ -16,3 +16,10 @@ set-max-user-namespaces-now:
 /etc/subgid:
   file.append:
     - text: "{{ pillar['podman']['username'] }}:100000:65536"
+
+# This fixes "there might not be enough IDs available in the namespace" error when pulling image.
+# Credits to https://github.com/containers/podman/issues/3421#issuecomment-544455837
+apply-subuid-and-subgid-changes:
+  cmd.run:
+    - name: sleep 10 && podman system migrate
+    - runas: {{ pillar['podman']['username'] }}
