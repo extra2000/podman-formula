@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.1](https://github.com/extra2000/podman-formula/compare/v2.0.0...v2.0.1) (2020-10-20)
+
+
+### Fixes
+
+* **config.rootless:** Fix namespace error when pulling image ([af4276c](https://github.com/extra2000/podman-formula/commit/af4276c8af236169bb5b05c2908f06769531caf6))
+
 ## [2.0.0](https://github.com/extra2000/podman-formula/compare/v1.1.5...v2.0.0) (2020-10-17)
 
 
