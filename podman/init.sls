@@ -4,6 +4,3 @@
 include:
   - .package
   - .config
-  {% if grains['os'] == 'CentOS' %}
-  - .subcomponent.dnsname
-  {% endif %}

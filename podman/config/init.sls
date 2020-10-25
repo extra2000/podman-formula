@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-include:
-  - .dnsname
 {% if grains['os_family'] == 'RedHat' %}
+include:
   - .rootless
   - .selinux.podman
   - .selinux.saltstack

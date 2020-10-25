@@ -1,12 +1,6 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-podman-prerequisites:
-  pkg.installed:
-    - pkgs:
-      - dnsmasq
-      - jq
-
 {% if grains['os'] == 'Ubuntu' %}
 kubic-libcontainer-repo:
   pkgrepo.managed:
