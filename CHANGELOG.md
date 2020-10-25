@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.0.2-alpha.1](https://github.com/extra2000/podman-formula/compare/v2.0.1...v2.0.2-alpha.1) (2020-10-25)
+
+
+### Performance Improvements
+
+* Remove unused `dnsname` plugin since rootless Podman doesn't have IP address ([ad40e05](https://github.com/extra2000/podman-formula/commit/ad40e05a4a14ffbad398f2205abf30ff836a0dcf))
+
 ### [2.0.1](https://github.com/extra2000/podman-formula/compare/v2.0.0...v2.0.1) (2020-10-20)
 
 
