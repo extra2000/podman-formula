@@ -9,6 +9,12 @@ set-max-user-namespaces-now:
   cmd.run:
     - name: echo "10000" > /proc/sys/user/max_user_namespaces
 
+{% if grains['os_family'] == 'Debian' %}
+allow-user-namespaces-clone:
+  cmd.run:
+    - name: echo "1" > /proc/sys/kernel/unprivileged_userns_clone
+{% endif %}
+
 /etc/subuid:
   file.append:
     - text: "{{ pillar['podman']['username'] }}:100000:65536"

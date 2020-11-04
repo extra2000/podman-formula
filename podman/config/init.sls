@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
-{% if grains['os_family'] == 'RedHat' %}
 include:
   - .rootless
+  {% if grains['os_family'] == 'RedHat' %}
   - .selinux.podman
   - .selinux.saltstack
-{% endif %}
+  {% endif %}
