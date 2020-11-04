@@ -19,7 +19,9 @@ set-max-user-namespaces-now:
 
 # This fixes "there might not be enough IDs available in the namespace" error when pulling image.
 # Credits to https://github.com/containers/podman/issues/3421#issuecomment-544455837
+# Also the "podman system migrate" command should be executed from a login user by using sudo su,
+# otherwise the command either fail or stuck when being executed by Salt daemon.
 apply-subuid-and-subgid-changes:
   cmd.run:
-    - name: sleep 10 && podman system migrate
+    - name: sudo su -l {{ pillar['podman']['username'] }} -c 'podman system migrate'
     - runas: {{ pillar['podman']['username'] }}
