@@ -23,5 +23,5 @@ set-max-user-namespaces-now:
 # otherwise the command either fail or stuck when being executed by Salt daemon.
 apply-subuid-and-subgid-changes:
   cmd.run:
-    - name: sudo su -l {{ pillar['podman']['username'] }} -c 'podman system migrate'
+    - name: sudo su -l {{ pillar['podman']['username'] }} -c 'sleep 10 && podman system migrate'
     - runas: {{ pillar['podman']['username'] }}
