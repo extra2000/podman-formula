@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.1.0-alpha.1](https://github.com/extra2000/podman-formula/compare/v2.0.2-alpha.1...v2.1.0-alpha.1) (2020-11-04)
+
+
+### Features
+
+* Add support for Debian, Ubuntu, and SUSE families ([bbd15ae](https://github.com/extra2000/podman-formula/commit/bbd15ae5bcea214e762e28d1302d55002985acd4))
+
+
+### Fixes
+
+* **config.rootless:** Fix `podman system migrate` command stuck on openSUSE Tumbleweed x86_64 ([9fc06a9](https://github.com/extra2000/podman-formula/commit/9fc06a9787d3b33b9b04d58056e22a56be4db434))
+
 ### [2.0.2-alpha.1](https://github.com/extra2000/podman-formula/compare/v2.0.1...v2.0.2-alpha.1) (2020-10-25)
 
 
