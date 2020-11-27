@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.1.0](https://github.com/extra2000/podman-formula/compare/v2.0.1...v2.1.0) (2020-11-27)
+
+
+### Features
+
+* Add support for Debian, Ubuntu, and SUSE families ([bbd15ae](https://github.com/extra2000/podman-formula/commit/bbd15ae5bcea214e762e28d1302d55002985acd4))
+
+
+### Performance Improvements
+
+* Remove unused `dnsname` plugin since rootless Podman doesn't have IP address ([ad40e05](https://github.com/extra2000/podman-formula/commit/ad40e05a4a14ffbad398f2205abf30ff836a0dcf))
+
+
+### Fixes
+
+* **config.rootless:** Fix `podman system migrate` command stuck on openSUSE Tumbleweed x86_64 ([9fc06a9](https://github.com/extra2000/podman-formula/commit/9fc06a9787d3b33b9b04d58056e22a56be4db434))
+
+
+### Maintenance
+
+* **release:** 2.0.2-alpha.1 [skip ci] ([334cddb](https://github.com/extra2000/podman-formula/commit/334cddbda4208b7310324c40d14e2e8f331bfcb7))
+* **release:** 2.1.0-alpha.1 [skip ci] ([511591a](https://github.com/extra2000/podman-formula/commit/511591a528855816e6b7d2891ffabace519f839a))
+
 ## [2.1.0-alpha.1](https://github.com/extra2000/podman-formula/compare/v2.0.2-alpha.1...v2.1.0-alpha.1) (2020-11-04)
 
 
