@@ -2,9 +2,8 @@
 # vim: ft=sls
 
 include:
-  - .dnsname
-{% if grains['os_family'] == 'RedHat' %}
   - .rootless
+  {% if grains['os_family'] == 'RedHat' %}
   - .selinux.podman
   - .selinux.saltstack
-{% endif %}
+  {% endif %}

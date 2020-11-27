@@ -2,4 +2,8 @@
 # vim: ft=sls
 
 include:
-  - .install
+  {% if grains['os_family'] == 'RedHat' or grains['os_family'] == 'Suse' %}
+  - .built-in
+  {% else %}
+  - .kubic
+  {% endif %}
