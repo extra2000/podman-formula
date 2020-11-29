@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.2.0](https://github.com/extra2000/podman-formula/compare/v2.1.0...v2.2.0) (2020-11-29)
+
+
+### Features
+
+* Add support for Arch families ([2247593](https://github.com/extra2000/podman-formula/commit/22475936b24872bee6c0b58726061f27b90469cb))
+
+
+### Continuous Integrations
+
+* Replace Travis CI with AppVeyor ([91cd858](https://github.com/extra2000/podman-formula/commit/91cd858bdc83254ffad11bf31800d4dcb1087ed6))
+* **semantic-release:** Write version to `VERSION.txt` ([a5252e5](https://github.com/extra2000/podman-formula/commit/a5252e5b3f14b68cf65cc2798095d12f31585c83))
+
+
+### Documentations
+
+* **README:** Add a list of Supported Platforms ([e187b0d](https://github.com/extra2000/podman-formula/commit/e187b0d3fbf53d22e427a687ea877833b76c24b8))
+
+
+### Maintenance
+
+* **release:** 2.2.0-alpha.1 [skip ci] ([e8e0e87](https://github.com/extra2000/podman-formula/commit/e8e0e87e3442074e7e2f594b928f300fb206cdec))
+
 ## [2.2.0-alpha.1](https://github.com/extra2000/podman-formula/compare/v2.1.0...v2.2.0-alpha.1) (2020-11-29)
 
 
