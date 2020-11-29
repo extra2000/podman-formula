@@ -6,6 +6,17 @@
 
 SaltStack Formula for [Podman](https://podman.io/).
 
+## Supported platforms
+
+| OS | Architecture |
+| -- | ------------ |
+| Fedora 32 | `x86_64` |
+| openSUSE Leap 15.2 | `x86_64`, `aarch64` |
+| openSUSE Tumbleweed | `x86_64`, `aarch64` |
+| Debian 10 | `x86_64` |
+| Ubuntu 20.04 | `x86_64` |
+| Arch Linux | `x86_64` |
+
 
 ## Available states
 
