@@ -1,5 +1,12 @@
 # Changelog
 
+### [2.2.1](https://github.com/extra2000/podman-formula/compare/v2.2.0...v2.2.1) (2021-01-20)
+
+
+### Documentations
+
+* **README:** Add license scan report and status ([297c145](https://github.com/extra2000/podman-formula/commit/297c1455511b447a1ede8926175be293617bff2f))
+
 ## [2.2.0](https://github.com/extra2000/podman-formula/compare/v2.1.0...v2.2.0) (2020-11-29)
 
 
