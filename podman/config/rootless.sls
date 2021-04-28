@@ -31,3 +31,7 @@ apply-subuid-and-subgid-changes:
   cmd.run:
     - name: sudo su -l {{ pillar['podman']['username'] }} -c 'sleep 10 && podman system migrate'
     - runas: {{ pillar['podman']['username'] }}
+
+enable-linger-for-a-nonroot-user:
+  cmd.run:
+    - name: loginctl enable-linger {{ pillar['podman']['username'] }}
