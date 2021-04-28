@@ -1,5 +1,13 @@
 # Changelog
 
+### [2.2.2](https://github.com/extra2000/podman-formula/compare/v2.2.1...v2.2.2) (2021-04-28)
+
+
+### Fixes
+
+* **rootless:** Enable linger ([2422684](https://github.com/extra2000/podman-formula/commit/24226841082cbb04e6d524008bef8fb56b8f902d))
+* **rootless:** Ensure `rootless-cni-infra` is removed on startup ([71db7c2](https://github.com/extra2000/podman-formula/commit/71db7c2be1439a52fc948db0006ca618608c35ab))
+
 ### [2.2.1](https://github.com/extra2000/podman-formula/compare/v2.2.0...v2.2.1) (2021-01-20)
 
 
