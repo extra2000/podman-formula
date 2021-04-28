@@ -35,3 +35,30 @@ apply-subuid-and-subgid-changes:
 enable-linger-for-a-nonroot-user:
   cmd.run:
     - name: loginctl enable-linger {{ pillar['podman']['username'] }}
+
+/home/{{ pillar['podman']['username'] }}/.config/systemd/user/default.target.wants:
+  file.directory:
+    - user: {{ pillar['podman']['username'] }}
+    - group: {{ pillar['podman']['username'] }}
+    - makedirs: true
+
+/home/{{ pillar['podman']['username'] }}/.config/systemd/user/multi-user.target.wants:
+  file.directory:
+    - user: {{ pillar['podman']['username'] }}
+    - group: {{ pillar['podman']['username'] }}
+    - makedirs: true
+
+## Ensure "rootless-cni-infra" is removed at startup, to prevent issues when starting rootless pods.
+/home/{{ pillar['podman']['username'] }}/.config/systemd/user/remove-rootless-cni-infra.service:
+  file.managed:
+    - source: salt://podman/files/remove-rootless-cni-infra.service
+    - user: {{ pillar['podman']['username'] }}
+    - group: {{ pillar['podman']['username'] }}
+
+/home/{{ pillar['podman']['username'] }}/.config/systemd/user/default.target.wants/remove-rootless-cni-infra.service:
+  file.symlink:
+    - target: /home/{{ pillar['podman']['username'] }}/.config/systemd/user/remove-rootless-cni-infra.service
+
+/home/{{ pillar['podman']['username'] }}/.config/systemd/user/multi-user.target.wants/remove-rootless-cni-infra.service:
+  file.symlink:
+    - target: /home/{{ pillar['podman']['username'] }}/.config/systemd/user/remove-rootless-cni-infra.service
