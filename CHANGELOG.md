@@ -1,5 +1,30 @@
 # Changelog
 
+## [3.0.0](https://github.com/extra2000/podman-formula/compare/v2.2.2...v3.0.0) (2021-05-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* **rootless,package:** Support for Debian 10 has been dropped
+* Pillar structure has changed.
+
+### Styles
+
+* **README:** Add extra spacing before Section `Supported Platforms` ([8ed0bb7](https://github.com/extra2000/podman-formula/commit/8ed0bb7e8d05fcef4872b46eade5d537f151768d))
+
+
+### Code Refactoring
+
+* **rootless,package:** Refactor `rootless` state and drop support for Debian 10 ([ba6a0a9](https://github.com/extra2000/podman-formula/commit/ba6a0a9c06aab5ce4393b6ab3f2afe62b041e77d))
+* Restructure formula according to official SaltStack Formula template ([da0b640](https://github.com/extra2000/podman-formula/commit/da0b64032d9df92ad200a80ca048c38e522befe2))
+* **registry:** Remove image registries which is only used by Arch Linux ([38abe02](https://github.com/extra2000/podman-formula/commit/38abe02928f6c04abe72989bf7550108cfc1fad6))
+
+
+### Documentations
+
+* **README:** Add Raspberry Pi OS (Buster) into Section `Unsupported platforms` and Podman manual instructions ([9b691d8](https://github.com/extra2000/podman-formula/commit/9b691d835c04d2cd27fb8d22e1e4a11ee477ce1d))
+* **README:** Move Debian 10 into Section `Unsupported platforms` and add manual Podman instructions for Debian 10 ([6362379](https://github.com/extra2000/podman-formula/commit/6362379b5788133329716908f82a8a1ac96ac68a))
+
 ### [2.2.2](https://github.com/extra2000/podman-formula/compare/v2.2.1...v2.2.2) (2021-04-28)
 
 
