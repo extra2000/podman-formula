@@ -23,6 +23,7 @@ SaltStack Formula for [Podman](https://podman.io/).
 | OS | Architecture | Remarks |
 | -- | ------------ | ------- |
 | Debian 10 | `x86_64`, `aarch64` | See [Podman Installations on Debian 10 (Buster)](docs/debian-10-installations.md) |
+| Raspberry Pi OS (Buster) | `aarch64` | See [Podman Installations on Raspberry Pi OS (Buster)](docs/rpi-buster-installations.md) |
 
 
 ## Available states
