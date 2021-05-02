@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
+{%- set tplroot = tpldir.split('/')[0] %}
+{%- from tplroot ~ "/map.jinja" import PODMAN with context %}
+
 /etc/sysctl.d/01-max-user-namespaces.conf:
   file.append:
     - text: "user.max_user_namespaces=10000"
@@ -17,11 +20,11 @@ allow-user-namespaces-clone:
 
 /etc/subuid:
   file.append:
-    - text: "{{ pillar['podman']['username'] }}:100000:65536"
+    - text: "{{ PODMAN.hostuser.name }}:100000:65536"
 
 /etc/subgid:
   file.append:
-    - text: "{{ pillar['podman']['username'] }}:100000:65536"
+    - text: "{{ PODMAN.hostuser.name }}:100000:65536"
 
 # This fixes "there might not be enough IDs available in the namespace" error when pulling image.
 # Credits to https://github.com/containers/podman/issues/3421#issuecomment-544455837
@@ -29,36 +32,36 @@ allow-user-namespaces-clone:
 # otherwise the command either fail or stuck when being executed by Salt daemon.
 apply-subuid-and-subgid-changes:
   cmd.run:
-    - name: sudo su -l {{ pillar['podman']['username'] }} -c 'sleep 10 && podman system migrate'
-    - runas: {{ pillar['podman']['username'] }}
+    - name: sudo su -l {{ PODMAN.hostuser.name }} -c 'sleep 10 && podman system migrate'
+    - runas: {{ PODMAN.hostuser.name }}
 
 enable-linger-for-a-nonroot-user:
   cmd.run:
-    - name: loginctl enable-linger {{ pillar['podman']['username'] }}
+    - name: loginctl enable-linger {{ PODMAN.hostuser.name }}
 
-/home/{{ pillar['podman']['username'] }}/.config/systemd/user/default.target.wants:
+/home/{{ PODMAN.hostuser.name }}/.config/systemd/user/default.target.wants:
   file.directory:
-    - user: {{ pillar['podman']['username'] }}
-    - group: {{ pillar['podman']['username'] }}
+    - user: {{ PODMAN.hostuser.name }}
+    - group: {{ PODMAN.hostuser.name }}
     - makedirs: true
 
-/home/{{ pillar['podman']['username'] }}/.config/systemd/user/multi-user.target.wants:
+/home/{{ PODMAN.hostuser.name }}/.config/systemd/user/multi-user.target.wants:
   file.directory:
-    - user: {{ pillar['podman']['username'] }}
-    - group: {{ pillar['podman']['username'] }}
+    - user: {{ PODMAN.hostuser.name }}
+    - group: {{ PODMAN.hostuser.name }}
     - makedirs: true
 
 ## Ensure "rootless-cni-infra" is removed at startup, to prevent issues when starting rootless pods.
-/home/{{ pillar['podman']['username'] }}/.config/systemd/user/remove-rootless-cni-infra.service:
+/home/{{ PODMAN.hostuser.name }}/.config/systemd/user/remove-rootless-cni-infra.service:
   file.managed:
     - source: salt://podman/files/remove-rootless-cni-infra.service
-    - user: {{ pillar['podman']['username'] }}
-    - group: {{ pillar['podman']['username'] }}
+    - user: {{ PODMAN.hostuser.name }}
+    - group: {{ PODMAN.hostuser.name }}
 
-/home/{{ pillar['podman']['username'] }}/.config/systemd/user/default.target.wants/remove-rootless-cni-infra.service:
+/home/{{ PODMAN.hostuser.name }}/.config/systemd/user/default.target.wants/remove-rootless-cni-infra.service:
   file.symlink:
-    - target: /home/{{ pillar['podman']['username'] }}/.config/systemd/user/remove-rootless-cni-infra.service
+    - target: /home/{{ PODMAN.hostuser.name }}/.config/systemd/user/remove-rootless-cni-infra.service
 
-/home/{{ pillar['podman']['username'] }}/.config/systemd/user/multi-user.target.wants/remove-rootless-cni-infra.service:
+/home/{{ PODMAN.hostuser.name }}/.config/systemd/user/multi-user.target.wants/remove-rootless-cni-infra.service:
   file.symlink:
-    - target: /home/{{ pillar['podman']['username'] }}/.config/systemd/user/remove-rootless-cni-infra.service
+    - target: /home/{{ PODMAN.hostuser.name }}/.config/systemd/user/remove-rootless-cni-infra.service

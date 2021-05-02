@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
+{%- set tplroot = tpldir.split('/')[0] %}
+{%- from tplroot ~ "/map.jinja" import PODMAN with context %}
+
 {% if grains['os'] == 'Ubuntu' %}
   {% set reponame = 'xUbuntu_' + grains['osrelease']|string %}
 {% elif grains['os'] == 'Debian' %}

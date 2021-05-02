@@ -1,2 +1,8 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
 podman:
-  username: vagrant
+  lookup:
+    hostuser:
+      name: vagrant
+      group: vagrant

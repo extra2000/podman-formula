@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 # vim: ft=sls
 
+{%- set tplroot = tpldir.split('/')[0] %}
+{%- from tplroot ~ "/map.jinja" import PODMAN with context %}
+
 /tmp/selinux-saltstack/saltstack.te:
   file.managed:
     - source: salt://podman/files/saltstack.te
