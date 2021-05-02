@@ -4,11 +4,7 @@
 {%- set tplroot = tpldir.split('/')[0] %}
 {%- from tplroot ~ "/map.jinja" import PODMAN with context %}
 
-{% if grains['os'] == 'Ubuntu' %}
-  {% set reponame = 'xUbuntu_' + grains['osrelease']|string %}
-{% elif grains['os'] == 'Debian' %}
-  {% set reponame = 'Debian_' + grains['osrelease']|string %}
-{% endif %}
+{% set reponame = 'xUbuntu_' + grains['osrelease']|string %}
 
 kubic-libcontainer-repo:
   pkgrepo.managed:
