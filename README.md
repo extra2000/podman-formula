@@ -6,6 +6,7 @@
 
 SaltStack Formula for [Podman](https://podman.io/).
 
+
 ## Supported platforms
 
 | OS | Architecture |
