@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.0.0](https://github.com/extra2000/podman-formula/compare/v3.0.1...v4.0.0) (2021-05-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* **package:** Installations from Kubic repository has been removed and support for Ubuntu older than 21.04 has been dropped.
+
+### Code Refactoring
+
+* **package:** Remove installations from Kubic repository and drop support for Ubuntu older than 21.04 ([5cec747](https://github.com/extra2000/podman-formula/commit/5cec747809875cdbb7f8771fb06afeca9e6a083a))
+
+
+### Documentations
+
+* **README:** Improve Section `Supported platforms` explanation ([7df3cbc](https://github.com/extra2000/podman-formula/commit/7df3cbc328e2ac446844be62feca562524be3566))
+
 ### [3.0.1](https://github.com/extra2000/podman-formula/compare/v3.0.0...v3.0.1) (2021-05-03)
 
 
