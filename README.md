@@ -11,8 +11,8 @@ SaltStack Formula for [Podman](https://podman.io/).
 
 | OS | Architecture |
 | -- | ------------ |
-| Fedora 32 | `x86_64` |
-| openSUSE Leap 15.2 | `x86_64`, `aarch64` |
+| Fedora 32 and newer | `x86_64` |
+| openSUSE Leap 15.2 and newer | `x86_64`, `aarch64` |
 | openSUSE Tumbleweed | `x86_64`, `aarch64` |
 | Ubuntu 21.04 and newer | `x86_64`, `aarch64` |
 | Arch Linux | `x86_64` |
