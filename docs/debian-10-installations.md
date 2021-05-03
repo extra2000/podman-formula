@@ -17,9 +17,24 @@ deb-src http://deb.debian.org/debian/ bullseye main
 #deb-src http://deb.debian.org/debian/ buster-updates main
 ```
 
-Install Podman:
+Update repository:
 ```
-$ sudo apt update && sudo apt install podman
+$ sudo apt update
+```
+
+
+## Installing Podman
+
+To install stable Podman from `bullseye` repository:
+```
+$ sudo apt install podman
+```
+
+Alternatively, to install Podman from [Kubic testing repository](https://software.opensuse.org/download/package?package=podman&project=devel%3Akubic%3Alibcontainers%3Atesting):
+```
+$ echo 'deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/testing/Debian_Unstable/ /' | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:testing.list
+$ curl -fsSL https://download.opensuse.org/repositories/devel:kubic:libcontainers:testing/Debian_Unstable/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/devel_kubic_libcontainers_testing.gpg > /dev/null
+$ sudo apt update && sudo apt install podman slirp4netns golang-github-containernetworking-plugin-dnsname
 ```
 
 
