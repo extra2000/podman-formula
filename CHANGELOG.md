@@ -1,5 +1,13 @@
 # Changelog
 
+### [3.0.1](https://github.com/extra2000/podman-formula/compare/v3.0.0...v3.0.1) (2021-05-03)
+
+
+### Documentations
+
+* **README:** Add how to install Podman from Kubic repository for Debian 10 ([c22a4a5](https://github.com/extra2000/podman-formula/commit/c22a4a5dfa07f6514a08620cf47ce4b02fe86e6f))
+* **README:** Remove `systemctl --user daemon-reload` ([980a937](https://github.com/extra2000/podman-formula/commit/980a937c399c58b1a458f07d78d3e5ff3ef533fc))
+
 ## [3.0.0](https://github.com/extra2000/podman-formula/compare/v2.2.2...v3.0.0) (2021-05-02)
 
 
