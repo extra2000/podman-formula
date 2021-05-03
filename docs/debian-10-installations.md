@@ -82,7 +82,6 @@ WantedBy=multi-user.target default.target
 
 Enable the `remove-rootless-cni-infra.service`:
 ```
-$ systemctl --user daemon-reload
 $ systemctl --user enable remove-rootless-cni-infra.service
 ```
 
